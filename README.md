@@ -168,3 +168,7 @@ cat logs/trading-journal.log.* | jq 'select(.fields.event == "position_reversal"
 ## Disclaimer
 
 This is an **educational project**. The trading strategies are for demonstration purposes only. **Always use the Kraken Demo environment for testing**. Never risk real capital on automated systems you don't fully understand.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
