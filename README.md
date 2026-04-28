@@ -29,12 +29,12 @@ The agent trades on **Kraken Futures** (demo environment supported) using techni
 ## Architecture
 
 ```
-┌─────────────┐     ┌─────────────────┐     ┌─────────────────┐
-│   Kraken    │────▶│  Market Regimes │────▶│   Regime Agent  │
-│   Futures   │     │   (TA Analysis) │     │   (LLM Decision)│
-└─────────────┘     └─────────────────┘     └────────┬────────┘
-                                                     │
-                         ┌─────────────────────────┘
+┌─────────────┐      ┌─────────────────┐      ┌─────────────────┐
+│   Kraken    │────▶│  Market Regimes │────▶│  Regime Agent   │
+│   Futures   │      │   (TA Analysis) │      │  (LLM Decision) │
+└─────────────┘      └─────────────────┘      └────────┬────────┘
+                                                       │
+                         ┌─────────────────────────────┘
                          ▼
                 ┌─────────────────┐
                 │   Tool Registry │◄─── Polymarket Sentiment Tool
@@ -42,10 +42,10 @@ The agent trades on **Kraken Futures** (demo environment supported) using techni
                 └─────────────────┘
                          │
                          ▼
-                ┌─────────────────┐     ┌─────────────┐
-                │  Trade Manager  │────▶│   Kraken    │
-                │ (Order Execution)│    │   Futures   │
-                └─────────────────┘     └─────────────┘
+                ┌──────────────────┐      ┌─────────────┐
+                │  Trade Manager   │────▶│   Kraken    │
+                │ (Order Execution)│      │   Futures   │
+                └──────────────────┘      └─────────────┘
 ```
 
 ## Tools
